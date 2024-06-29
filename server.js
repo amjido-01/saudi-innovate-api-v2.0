@@ -32,7 +32,7 @@ app.post("/api/contact", (req, res) => {
         }
     })
     transporter.sendMail({
-        from: `${name} <${email}>`,
+        from: `${name} <${req.body.email}>`,
         to: process.env.EMAIL,
         subject: subject,
         text: message
